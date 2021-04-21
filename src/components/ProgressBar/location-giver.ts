@@ -5,55 +5,75 @@ const LOCATIONS = [
     distanceFromStartPoint: 0,
   },
   {
+    title: 'Belfast',
+    distanceFromLastLocation: 518,
+    distanceFromStartPoint: 518,
+  },
+  {
     title: 'Paris',
-    distanceFromLastLocation: 342,
-    distanceFromStartPoint: 342,
+    distanceFromLastLocation: 854,
+    distanceFromStartPoint: 1372,
+  },
+  {
+    title: 'Madrid',
+    distanceFromLastLocation: 1053,
+    distanceFromStartPoint: 2425,
   },
   {
     title: 'Berlin',
-    distanceFromLastLocation: 878,
-    distanceFromStartPoint: 1220,
+    distanceFromLastLocation: 1870,
+    distanceFromStartPoint: 4295,
   },
   {
-    title: 'Warsaw',
-    distanceFromLastLocation: 516,
-    distanceFromStartPoint: 1736,
+    title: 'Milan',
+    distanceFromLastLocation: 843,
+    distanceFromStartPoint: 5138,
   },
   {
-    title: 'Kyiv',
-    distanceFromLastLocation: 687,
-    distanceFromStartPoint: 2423,
+    title: 'Athens',
+    distanceFromLastLocation: 1461,
+    distanceFromStartPoint: 6599,
   },
-  {
-    title: 'Moscow',
-    distanceFromLastLocation: 756,
-    distanceFromStartPoint: 3179,
-  },
-  {
-    title: 'St.Petersburg',
-    distanceFromLastLocation: 634,
-    distanceFromStartPoint: 3813,
-  },
-  {
-    title: 'Helsinki',
-    distanceFromLastLocation: 299,
-    distanceFromStartPoint: 4112,
-  },
-  {
-    title: 'Stockholm',
-    distanceFromLastLocation: 395,
-    distanceFromStartPoint: 4507,
-  },
-  {
-    title: 'Oslo',
-    distanceFromLastLocation: 416,
-    distanceFromStartPoint: 4923,
-  },
+  // {
+  //   title: 'Istanbul',
+  //   distanceFromLastLocation: 562,
+  //   distanceFromStartPoint: 2499,
+  // },
+  // {
+  //   title: 'St. Petersburg',
+  //   distanceFromLastLocation: 2104,
+  //   distanceFromStartPoint: 2100,
+  // },
+  // {
+  //   title: 'New Dehli',
+  //   distanceFromLastLocation: 4932,
+  //   distanceFromStartPoint: 6709,
+  // },
+  // {
+  //   title: 'Hanoi',
+  //   distanceFromLastLocation: 3009,
+  //   distanceFromStartPoint: 9234,
+  // },
+  // {
+  //   title: 'Singapore',
+  //   distanceFromLastLocation: 2206,
+  //   distanceFromStartPoint: 10854,
+  // },
+  // {
+  //   title: 'Wellington',
+  //   distanceFromLastLocation: 8524,
+  //   distanceFromStartPoint: 18813,
+  // },
+  // {
+  //   title: 'Toronto',
+  //   distanceFromLastLocation: 14137,
+  //   distanceFromStartPoint: 5713,
+  // },
 ];
 
 export const calculateLocations = async () => {
   const response = await fetch(
-    'https://spreadsheets.google.com/feeds/cells/1grIa9udYh9K0C63qvbvyA7TyqzLuZPi4L0YWiu6uSfk/1/public/full?alt=json'
+    'https://spreadsheets.google.com/feeds/cells/1LvU1pcPDQRrV77SPIszVRJh-XadCADmnelTtTm9PfmI/1/public/full?alt=json'
   );
   const data = (await response.json()) as any;
 
